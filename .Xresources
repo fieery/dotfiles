@@ -35,14 +35,14 @@ st.color14:     		#8ec07c
 st.color7:      		#ebdbb2
 st.color15:     		#d5c4a1
 
-*.selbgcolor:			#458588
+*.selbgcolor:			  #458588
 *.selbordercolor:		#458588
-*.selfgcolor:			#fbf1c7
-*.normbgcolor:		    #1d2021
-*.normbordercolor:		#504945
+*.selfgcolor:			  #fbf1c7
+*.normbgcolor:		  #1d2021
+*.normbordercolor:	#504945
 *.normfgcolor:			#bdae93
 
 ! Sxiv
 Sxiv.background:		#282828
 Sxiv.foreground:		#458487
-Sxiv.font:				14
+Sxiv.font:				  14
