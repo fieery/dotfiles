@@ -1,0 +1,19 @@
+#!/bin/sh
+
+choices="quitdwm\npoweroff\nreboot\n"
+
+chosen=$(echo -e "$choices" | dmenu -i)
+
+case "$chosen" in
+	quitdwm)
+		kill $(pgrep dwm) &&
+		kill $(pgrep pipewire)
+		;;
+	poweroff)
+		doas /sbin/poweroff
+		;;
+	reboot)
+		doas /sbin/reboot
+		;;
+esac
+

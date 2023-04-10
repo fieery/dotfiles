@@ -1,0 +1,8 @@
+#!/bin/sh
+hour=$(date '+%H')
+
+while true; do
+		( [ $hour -lt 20 ] && [ $hour -gt 8 ] && blugon -oS 4400 ||
+		blugon -oS 1600 ) &&
+		sleep 3600
+done

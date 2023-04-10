@@ -1,0 +1,29 @@
+#!/bin/sh
+LAYOUT=$(setxkbmap -print | awk -F"+" '/xkb_symbols/ {print $2}')
+file="$HOME/.local/share/bmarks"
+setxkbmap $LAYOUT
+
+case $1 in
+		add)
+			bookmark=$(xclip -o)
+			name=$(zenity --entry --text "Bookmark name")
+			match=$(grep "$bookmark" "$file")
+			[[ $bookmark != http* ]] && 
+			notify-send "Bookmark error" "Wrong format" && exit ||
+			[ -n "$match" ] &&
+			notify-send "Bookmark error" "Bookmark already exists" && exit ||
+			notify-send "Bookmark added successfully" "$bookmark"
+			echo "$name | $bookmark"  >> $file &&
+			sort $file -o $file	
+			;;
+		insert)
+			paste=$(cat $file | dmenu -i -l 20 | rev | awk '{print $1;}' | rev)
+			xdotool type $paste && xdotool key Return
+			;;
+		delete)
+				selection=`cat $file | dmenu -i -l 20 -sb "#cc241d"`
+				zenity --question --text "Delete this bookmark?" &&
+				grep -v "$selection" $file > "${file}.tmp" && mv "${file}.tmp" $file &&
+				sed '/^[[:space:]]*$/d' $file
+			;; 
+esac

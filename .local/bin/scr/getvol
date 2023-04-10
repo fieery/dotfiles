@@ -1,0 +1,50 @@
+#!/bin/sh
+vol=$(pamixer --get-volume)
+vol_human=$(pamixer --get-volume-human)
+
+help() {
+cat <<EOF
+Usage: getvol [option] 
+
+Options:
+	
+	-h	Usage help
+	-u	Increase volume
+	-d  Decrease volume
+	-m	Mute
+	-p	Play / Pause
+	-n	Next
+	-b	Previous
+
+EOF
+}
+
+case $1 in
+	u) 
+		[ $vol -lt 100 ] && pamixer -i 5
+		pkill -RTMIN+1 dwmblocks
+		;;
+	d)
+		[ $vol -gt 0 ] && pamixer -d 5
+		pkill -RTMIN+1 dwmblocks
+    	;;
+	m)
+		pamixer -t
+		pkill -RTMIN+1 dwmblocks
+		;;
+	p)
+		playerctl -p spotify play-pause
+		;;
+	n)
+		playerctl -p spotify next
+		;;
+	b)
+		playerctl -p spotify previous
+		;;
+	t)
+		[ "$vol_human"  == "muted" ] && printf M || pamixer --get-volume 
+		;;
+	*)
+		help
+		;;
+esac	
