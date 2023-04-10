@@ -1,0 +1,49 @@
+# Reload sxhkd config
+ctrl + shift + r
+	pkill -USR1 -x sxhkd
+
+# Control audio
+ctrl + shift + KP_Up
+	$SCR/getvol u
+ctrl + shift + KP_Down
+	$SCR/getvol d
+ctrl + shift + KP_Insert
+	$SCR/getvol m
+ctrl + shift + KP_Begin
+	playerctl -p spotify play-pause
+ctrl + shift + KP_Right
+	$SCR/getvol n
+ctrl + shift + KP_Left
+	$SCR/getvol b
+
+# Launch software
+alt + shift + d
+	dbus-launch thunar
+alt + shift + l
+	lutris
+alt + shift + n
+	transmission-gtk 
+alt + shift + p
+	keepassxc
+alt + shift + s
+	$SCR/spnoads
+alt + shift + x
+	firefox -P default
+alt + shift + z
+	telegram-desktop	
+
+# Launch scripts & tools
+alt + shift + q
+    $SCR/menu
+ctrl + shift + b
+ 	$SCR/bmark add 
+ctrl + shift + Insert
+ 	$SCR/bmark insert
+ctrl + shift + Delete
+ 	$SCR/bmark delete
+ctrl + shift + KP_Multiply
+	gpick -o -s | xclip -sel c
+ctrl + shift + KP_Divide
+	pavucontrol
+ctrl + shift + KP_Add
+	gpick
