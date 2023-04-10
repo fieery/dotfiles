@@ -1,48 +1,48 @@
 ! special
-st.foreground:			#ebdbb2
-st.background: 			#282828
-st.cursorColor:			#d3d0c8
+st.foreground:        #ebdbb2
+st.background:        #282828
+st.cursorColor:       #d3d0c8
 
 ! black
-st.color0:				#1d2021
-st.color8:				#282828
+st.color0:			  	  #1d2021
+st.color8:				    #282828
 
 ! red
-st.color1:				#cc241d
-st.color9:				#fb4934
+st.color1:		    		#cc241d
+st.color9:    				#fb4934
 
 ! green
-st.color2:				#98971a
-st.color10:				#b8bb26
+st.color2:				    #98971a
+st.color10:				    #b8bb26
 
 ! yellow
-st.color3:				#d79921
-st.color11:				#fabd2f
+st.color3:				    #d79921
+st.color11:				    #fabd2f
 
 ! blue
-st.color4:				#458588
-st.color12:				#83a598
+st.color4:			    	#458588
+st.color12:			    	#83a598
 
 ! magenta
-st.color5:				#b16286
-st.color13:				#d3869b
+st.color5:			    	#b16286
+st.color13:			    	#d3869b
 
 ! cyan
-st.color6:				#689d6a
-st.color14:				#8ec07c
+st.color6:			    	#689d6a
+st.color14:			    	#8ec07c
 
 ! white
-st.color7:				#ebdbb2
-st.color15:				#d5c4a1
+st.color7:			    	#ebdbb2
+st.color15:			    	#d5c4a1
 
-*.selbgcolor:			#458588
-*.selbordercolor:		#458588
-*.selfgcolor:			#fbf1c7
+*.selbgcolor:		    	#458588
+*.selbordercolor: 		#458588
+*.selfgcolor:			    #fbf1c7
 *.normbgcolor:		  	#1d2021
 *.normbordercolor:		#504945
-*.normfgcolor:			#bdae93
+*.normfgcolor:		  	#bdae93
 
 ! Sxiv
-Sxiv.background:		#282828
-Sxiv.foreground:		#458487
-Sxiv.font:				14
+Sxiv.background:	  	#282828
+Sxiv.foreground:	  	#458487
+Sxiv.font:				    14
