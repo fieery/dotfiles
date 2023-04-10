@@ -1,0 +1,10 @@
+syntax on
+set number
+set cursorline
+set tabstop=4
+set nobackup
+set ignorecase
+set smartcase
+set wildmenu
+set wildmode=list:longest
+set pastetoggle=<F2>
